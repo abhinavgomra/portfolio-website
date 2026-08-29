@@ -1,5 +1,8 @@
 .section-container {
   width: 1300px;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .title,
 .para {
@@ -19,11 +22,12 @@
 @media only screen and (max-width: 1400px) {
   .section-container {
     width: 900px;
+    max-width: calc(100% - 80px);
   }
 }
 @media only screen and (max-width: 900px) {
   .section-container {
-    width: 500px;
+    width: 100%;
     max-width: var(--cWidth);
   }
 }
