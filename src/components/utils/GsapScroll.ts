@@ -92,7 +92,7 @@ export function setCharTimeline(
         .fromTo(
           ".what-box-in",
           { display: "none" },
-          { display: "flex", duration: 0.1, delay: 6 },
+          { display: "flex", duration: 0.1, delay: 2 },
           0
         )
         .fromTo(
