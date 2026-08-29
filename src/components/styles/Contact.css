@@ -40,6 +40,7 @@ a.contact-social {
   font-size: 16px;
   border-bottom: 1px solid #ccc;
   margin-bottom: 8px;
+  width: fit-content;
 }
 .contact-box h2 {
   font-weight: 400;
@@ -120,14 +121,24 @@ a.contact-social {
 }
 @media only screen and (max-width: 900px) {
   .contact-flex {
-    flex-direction: column;
-    gap: 40px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 30px;
+    justify-content: space-between;
+  }
+  .contact-box {
+    flex: 1 1 180px;
+    min-width: 180px;
+  }
+  .contact-box:last-child {
+    flex: 1 1 100%;
+    margin-top: 10px;
   }
   .contact-flex p {
     margin-bottom: 0px;
   }
   .contact-flex h4 {
-    margin-top: 20px;
+    margin-top: 15px;
   }
   .contact-section {
     margin-top: 50px;
