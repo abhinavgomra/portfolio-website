@@ -20,6 +20,7 @@ const Scene = () => {
   const { setLoading } = useLoading();
 
   const [character, setChar] = useState<THREE.Object3D | null>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
   useEffect(() => {
     if (canvasDiv.current) {
       let rect = canvasDiv.current.getBoundingClientRect();
@@ -69,6 +70,7 @@ const Scene = () => {
             setTimeout(() => {
               light.turnOnLights();
               animations.startIntro();
+              setIsLoaded(true);
             }, 2500);
           });
           window.addEventListener("resize", () =>
@@ -143,7 +145,7 @@ const Scene = () => {
 
   return (
     <>
-      <div className="character-container">
+      <div className={`character-container ${isLoaded ? "character-loaded" : ""}`}>
         <div className="character-model" ref={canvasDiv}>
           <div className="character-rim"></div>
           <div className="character-hover" ref={hoverDivRef}></div>
