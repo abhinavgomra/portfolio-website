@@ -57,9 +57,10 @@ const MainContainer = ({ children }: PropsWithChildren) => {
       <Cursor />
       <Navbar />
       <SocialIcons />
-      {shouldRenderCharacter && children}
       <div className="container-main">
-        <Landing />
+        <Landing>
+          {shouldRenderCharacter && children}
+        </Landing>
         <About />
         <WhatIDo />
         <Career />
