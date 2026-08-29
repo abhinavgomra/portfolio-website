@@ -35,7 +35,7 @@ const Work = () => {
         trigger: ".work-section",
         start: "top top",
         end: `+=${translateX}`,
-        scrub: 1,
+        scrub: 0.3,
         pin: true,
         pinSpacing: true,
         anticipatePin: 1,

@@ -138,7 +138,7 @@ export function setAllTimeline() {
       trigger: ".career-section",
       start: "top 50%",
       end: "bottom 30%",
-      scrub: 1.5,
+      scrub: 0.5,
       invalidateOnRefresh: true,
     },
   });
