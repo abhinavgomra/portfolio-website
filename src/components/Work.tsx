@@ -5,6 +5,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect } from "react";
 import { config } from "../config";
 import { Link } from "react-router-dom";
+import { FaGithub } from "react-icons/fa";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -72,7 +73,20 @@ const Work = () => {
                   <h3>0{index + 1}</h3>
 
                   <div>
-                    <h4>{project.title}</h4>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+                      <h4>{project.title}</h4>
+                      {project.github && (
+                        <a 
+                          href={project.github} 
+                          target="_blank" 
+                          rel="noopener noreferrer" 
+                          style={{ color: 'inherit', display: 'flex', zIndex: 10, position: 'relative' }} 
+                          data-cursor="disable"
+                        >
+                          <FaGithub size={18} />
+                        </a>
+                      )}
+                    </div>
                     <p>{project.category}</p>
                   </div>
                 </div>

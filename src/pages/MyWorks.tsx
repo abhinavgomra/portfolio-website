@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { config } from "../config";
+import { FaGithub } from "react-icons/fa";
 import "./MyWorks.css";
 
 const MyWorks = () => {
@@ -25,7 +26,17 @@ const MyWorks = () => {
                 <img src={project.image} alt={project.title} loading="lazy" decoding="async" />
               </div>
               <div className="myworks-card-info">
-                <h3>{project.title}</h3>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '10px', marginBottom: '8px' }}>
+                  <h3 style={{ marginBottom: 0 }}>{project.title}</h3>
+                  {project.github && (
+                    <span 
+                      onClick={(e) => { e.preventDefault(); window.open(project.github, "_blank"); }}
+                      style={{ display: 'flex', zIndex: 10, position: 'relative' }}
+                    >
+                      <FaGithub size={20} />
+                    </span>
+                  )}
+                </div>
                 <p className="myworks-card-category">{project.category}</p>
                 <p className="myworks-card-description">{project.description}</p>
                 <p className="myworks-card-tech">{project.technologies}</p>

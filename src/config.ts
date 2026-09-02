@@ -110,7 +110,8 @@ export const config = {
             technologies: "React, Node.js, Express, MongoDB",
             image: "/images/medicare_app.webp",
             description: "My first full-stack web application designed for medical care coordination, patient registration, and scheduling management.",
-            link: "https://github.com/abhinavgomra/medicare"
+            link: "https://medicare-app-nine-mu.vercel.app/",
+            github: "https://github.com/abhinavgomra/medicare-app"
         },
         {
             id: 3,
